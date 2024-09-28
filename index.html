@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <Style>
+        
+/* Reset some basic styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: Arial, sans-serif;
+}
+
+/* Body styling */
+body {
+    background-color: #dcc3c9;
+    color: #da4c10;
+    padding: 20px;
+}
+
+/* Header styling */
+.menu-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.menu-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.menu-header p {
+    font-size: 1.2rem;
+    color: #1f1b94;
+}
+
+/* Menu sections styling */
+.menu-section {
+    margin-bottom: 40px;
+}
+
+.menu-section h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Menu list styling */
+.menu-list {
+    padding: 0;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-item h3 {
+    font-size: 1.5rem;
+}
+
+.price {
+    font-size: 1.2rem;
+    color: #815b9f;
+}
+
+.menu-list li {
+    margin-bottom: 20px;
+}
+
+.menu-list p {
+    font-size: 1rem;
+    color: #7e3232;
+}
+
+/* Footer styling */
+.menu-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #24aa72;
+}
+
+
+
+
+
+    </Style>
+    <header class="menu-header">
+        <h1>NARAYANA</h1>
+        <p>Welcome to our delicious menu!</p>
+    </header>
+
+    <section class="menu-section">
+        <h2>Starters</h2>
+        <ul class="menu-list">
+            <li>
+                <div class="menu-item">
+                    <h3>Caesar Salad</h3>
+                    <span class="price">100rs</span>
+                </div>
+                <p>Crisp romaine lettuce with Caesar dressing, croutons, and parmesan cheese.</p>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <h3>Bruschetta</h3>
+                    <span class="price">300rs</span>
+                </div>
+                <p>Grilled bread topped with diced tomatoes, garlic, basil, and olive oil.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section class="menu-section">
+        <h2>Main Courses</h2>
+        <ul class="menu-list">
+            <li>
+                <div class="menu-item">
+                    <h3>Grilled Salmon</h3>
+                    <span class="price">500rs</span>
+                </div>
+                <p>Fresh salmon grilled to perfection with a lemon butter sauce.</p>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <h3>Margherita Pizza</h3>
+                    <span class="price">350rs</span>
+                </div>
+                <p>Classic pizza with fresh mozzarella, tomatoes, and basil.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section class="menu-section">
+        <h2>Desserts</h2>
+        <ul class="menu-list">
+            <li>
+                <div class="menu-item">
+                    <h3>Chocolate Lava Cake</h3>
+                    <span class="price">400rs</span>
+                </div>
+                <p>Rich and gooey chocolate cake with a molten center.</p>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <h3>Cheesecake</h3>
+                    <span class="price">150rs</span>
+                </div>
+                <p>Creamy cheesecake with a buttery graham cracker crust.</p>
+            </li>
+        </ul>
+    </section>
+
+    <footer class="menu-footer">
+        <p>© 2024 NARAYANA. All rights reserved.</p>
+    </footer>
+</body>
+</html>
