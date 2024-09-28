@@ -4,164 +4,112 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Menu</title>
+    <title>Wedding Invitation</title>
     <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <Style>
-        
-/* Reset some basic styles */
-body, h1, h2, h3, p, ul, li {
+    <style>
+        body {
     margin: 0;
     padding: 0;
-    list-style: none;
-    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #647166;
+    font-family: 'Cursive', sans-serif;
 }
 
-/* Body styling */
-body {
-    background-color: #dcc3c9;
-    color: #da4c10;
-    padding: 20px;
-}
-
-/* Header styling */
-.menu-header {
+.container {
+    max-width: 400px;
+    background: #ffffff;
+    border: 2px solid #d4af37;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
     text-align: center;
-    margin-bottom: 20px;
 }
 
-.menu-header h1 {
-    font-size: 2.5rem;
+.page {
+    display: none;
+    padding: 30px;
+}
+
+.page.active {
+    display: block;
+}
+
+.title, .event-title, .rsvp-title {
+    color: #d4af37;
+    font-size: 28px;
     margin-bottom: 10px;
 }
 
-.menu-header p {
-    font-size: 1.2rem;
-    color: #1f1b94;
+.couple-names {
+    font-size: 24px;
+    color: #6a1b9a;
+    margin: 0;
 }
 
-/* Menu sections styling */
-.menu-section {
-    margin-bottom: 40px;
+.date, .location, .time, .event-details, .rsvp-details {
+    color: #555;
+    margin: 5px 0;
 }
 
-.menu-section h2 {
-    font-size: 2rem;
-    border-bottom: 2px solid #333;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+.input-field {
+    width: calc(100% - 40px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-/* Menu list styling */
-.menu-list {
-    padding: 0;
+.next-btn, .back-btn, .submit-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #d4af37;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.menu-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.next-btn:hover, .back-btn:hover, .submit-btn:hover {
+    background-color: #b58929;
 }
 
-.menu-item h3 {
-    font-size: 1.5rem;
-}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Page 1: Welcome -->
+        <div class="page" id="page-1">
+            <h1 class="title">You're Invited!</h1><h3 class="title">Our Wedding</h3>
 
-.price {
-    font-size: 1.2rem;
-    color: #815b9f;
-}
+            <h2 class="couple-names">Gaurav & Smriti</h2>
+            <p class="date">December, 04, 2024</p>
+            <button class="next-btn" onclick="showPage(2)">Next</button>
+        </div>
 
-.menu-list li {
-    margin-bottom: 20px;
-}
+        <!-- Page 2: Event Details -->
+        <div class="page" id="page-2">
+            <h1 class="event-title">Wedding Ceremony</h1>
+            <p class="event-details">Welcome to our wedding! We are thrilled to have you here to celebrate this beautiful day with us</p>
+            <p class="location">OM marrage Lown Belava Baba Lamahi Varanasi</p>
+            <p class="time">4:00 PM - 6:00 PM</p>
+            <button class="next-btn" onclick="showPage(3)">Next</button>
+            <button class="back-btn" onclick="showPage(1)">Back</button>
+        </div>
 
-.menu-list p {
-    font-size: 1rem;
-    color: #7e3232;
-}
+        <!-- Page 3: RSVP -->
+        <div class="page" id="page-3">
+            <h1 class="rsvp-title">RSVP</h1>
+            <p class="rsvp-details">Please let us know if you will be able to attend.</p>
+            <input type="text" placeholder="Your Name" class="input-field">
+            <button class="submit-btn">Submit</button>
+            <button class="back-btn" onclick="showPage(2)">Back</button>
+        </div>
+    </div>
 
-/* Footer styling */
-.menu-footer {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.9rem;
-    color: #24aa72;
-}
-
-
-
-
-
-    </Style>
-    <header class="menu-header">
-        <h1>NARAYANA</h1>
-        <p>Welcome to our delicious menu!</p>
-    </header>
-
-    <section class="menu-section">
-        <h2>Starters</h2>
-        <ul class="menu-list">
-            <li>
-                <div class="menu-item">
-                    <h3>Caesar Salad</h3>
-                    <span class="price">100rs</span>
-                </div>
-                <p>Crisp romaine lettuce with Caesar dressing, croutons, and parmesan cheese.</p>
-            </li>
-            <li>
-                <div class="menu-item">
-                    <h3>Bruschetta</h3>
-                    <span class="price">300rs</span>
-                </div>
-                <p>Grilled bread topped with diced tomatoes, garlic, basil, and olive oil.</p>
-            </li>
-        </ul>
-    </section>
-
-    <section class="menu-section">
-        <h2>Main Courses</h2>
-        <ul class="menu-list">
-            <li>
-                <div class="menu-item">
-                    <h3>Grilled Salmon</h3>
-                    <span class="price">500rs</span>
-                </div>
-                <p>Fresh salmon grilled to perfection with a lemon butter sauce.</p>
-            </li>
-            <li>
-                <div class="menu-item">
-                    <h3>Margherita Pizza</h3>
-                    <span class="price">350rs</span>
-                </div>
-                <p>Classic pizza with fresh mozzarella, tomatoes, and basil.</p>
-            </li>
-        </ul>
-    </section>
-
-    <section class="menu-section">
-        <h2>Desserts</h2>
-        <ul class="menu-list">
-            <li>
-                <div class="menu-item">
-                    <h3>Chocolate Lava Cake</h3>
-                    <span class="price">400rs</span>
-                </div>
-                <p>Rich and gooey chocolate cake with a molten center.</p>
-            </li>
-            <li>
-                <div class="menu-item">
-                    <h3>Cheesecake</h3>
-                    <span class="price">150rs</span>
-                </div>
-                <p>Creamy cheesecake with a buttery graham cracker crust.</p>
-            </li>
-        </ul>
-    </section>
-
-    <footer class="menu-footer">
-        <p>© 2024 NARAYANA. All rights reserved.</p>
-    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
